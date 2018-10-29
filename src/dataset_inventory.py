@@ -32,5 +32,4 @@ class DatasetInventory:
         model = get_model('linear_model.LinearRegression')
         fit = model.fit(x_train, y_train)
         predictions = fit.predict(x_test)
-        mse, r2 = get_metrics(predictions, y_test)
-        residual_plot(fitted=predictions, target=y_test, mse=mse, r2=r2)
+        residual_plot(fitted=predictions, target=y_test)
