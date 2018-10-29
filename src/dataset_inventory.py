@@ -29,7 +29,7 @@ class DatasetInventory:
 
     @staticmethod
     def linear_model(x_train, x_test, y_train, y_test):
-        model = get_model('linear_model', 'LinearRegression')
+        model = get_model('linear_model.LinearRegression')
         fit = model.fit(x_train, y_train)
         predictions = fit.predict(x_test)
         mse, r2 = get_metrics(predictions, y_test)
